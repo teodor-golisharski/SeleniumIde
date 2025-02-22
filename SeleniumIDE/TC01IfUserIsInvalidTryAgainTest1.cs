@@ -29,7 +29,7 @@ public class TC01IfUserIsInvalidTryAgainTest
         options.AddArguments("disable-dev-shm-usage");
         options.AddArguments("disable-gpu");
 
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
     }
