@@ -21,6 +21,11 @@ public class TC01IfUserIsInvalidTryAgainTest
     [SetUp]
     public void SetUp()
     {
+        //ChromeOptions options = new ChromeOptions();
+        //options.AddArguments("headless");
+        //options.AddArguments("no-sandbox");
+        //options.AddArguments("disable-dev-shm-usage");
+
         driver = new ChromeDriver();
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
@@ -30,6 +35,7 @@ public class TC01IfUserIsInvalidTryAgainTest
     protected void TearDown()
     {
         driver.Quit();
+        driver.Dispose();
     }
 
     [Test]
